@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCore - School Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>CampusCore</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <h2>Welcome to CampusCore</h2>
+            <p>Your one-stop solution for managing school operations. Empowering educational institutions with seamless management tools.</p>
+            <button id="getStartedBtn" class="cta-btn">Get Started</button>
+        </section>
+
+        <!-- Registration Page (hidden by default) -->
+        <section id="registration" class="section" style="display: none;">
+            <div class="back-btn-container">
+                <button id="backBtn" class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+            </div>
+            <h2>Register for CampusCore</h2>
+            <form id="registrationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="college">College Name:</label>
+                <input type="text" id="college" name="college" required>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <h2>Modules to Automate School Management</h2>
+            <p>Single ERP Platform for All Your Education Needs</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Courses</h3>
+                    <p>Manage course structures, schedules, and enrollment seamlessly.</p>
+                    <button class="learn-more" data-modal="coursesModal">Learn More</button>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Students</h3>
+                    <p>Track student data, academic performance, and attendance.</p>
+                    <button class="learn-more" data-modal="studentsModal">Learn More</button>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Faculty</h3>
+                    <p>Allocate subjects, track teaching schedules, and performance.</p>
+                    <button class="learn-more" data-modal="facultyModal">Learn More</button>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Administrative Staff</h3>
+                    <p>Streamline administrative processes and resource management.</p>
+                    <button class="learn-more" data-modal="adminModal">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About CampusCore</h2>
+            <p>
+                CampusCore is a next-generation academic management system designed to address the multifaceted needs of educational institutions. It provides a centralized platform for managing all aspects of school administration, from student enrollment and faculty management to course structuring and resource allocation. By streamlining these processes, CampusCore helps institutions operate more efficiently, reduce manual errors, and improve productivity.
+            </p>
+            <p>
+                With CampusCore, stakeholders such as administrators, teachers, students, and parents are all interconnected on a single platform. This facilitates real-time communication, efficient task delegation, and transparency. The system is equipped with advanced tools to manage timetables, attendance, fee collection, and examination processes, ensuring seamless integration of all administrative activities. Additionally, CampusCore's reporting features provide insightful analytics that aid in decision-making and performance tracking.
+            </p>
+            <p>
+                What sets CampusCore apart is its adaptability to institutions of all sizes and types. Whether you are running a school, college, or university, CampusCore's modular approach ensures it can cater to your specific needs. Its user-friendly interface, secure cloud-based system, and customizable features make it a reliable solution for transforming the academic management experience.
+            </p>
+           <img src="file:///C:/Users/rahul/Downloads/app%20image.png" alt="About CampusCore">
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions or need support? Reach out to us:</p>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ourcampus123@example.com">ourcampus123@example.com</a></p>
+                <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:123456789">123456789</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CampusCore. All rights reserved.</p>
+    </footer>
+
+    <!-- Modals for Learn More -->
+    <div id="coursesModal" class="modal">
+        <div class="modal-content">
+            <h3>Courses <i class="fas fa-book"></i></h3>
+            <p>CampusCore provides comprehensive tools for managing courses effectively:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> **Custom Course Structures**: Design courses based on your institution's requirements.</li>
+                <li><i class="fas fa-check-circle"></i> **Dynamic Scheduling**: Allocate classes and subjects effortlessly.</li>
+                <li><i class="fas fa-check-circle"></i> **Real-time Updates**: Keep students and faculty updated with course changes instantly.</li>
+                <li><i class="fas fa-check-circle"></i> **Enrollment Management**: Track and manage student enrollment seamlessly.</li>
+            </ul>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="studentsModal" class="modal">
+        <div class="modal-content">
+            <h3>Students <i class="fas fa-user-graduate"></i></h3>
+            <p>Track every aspect of student life within your institution:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Academic Performance Reports</li>
+                <li><i class="fas fa-check-circle"></i> Attendance Tracking</li>
+                <li><i class="fas fa-check-circle"></i> Extracurricular Activity Logs</li>
+                <li><i class="fas fa-check-circle"></i> Personalized Student Profiles</li>
+            </ul>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="facultyModal" class="modal">
+        <div class="modal-content">
+            <h3>Faculty <i class="fas fa-chalkboard-teacher"></i></h3>
+            <p>Empower your faculty with tools to succeed:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Subject Allocation</li>
+                <li><i class="fas fa-check-circle"></i> Teaching Schedules</li>
+                <li><i class="fas fa-check-circle"></i> Faculty Performance Tracking</li>
+                <li><i class="fas fa-check-circle"></i> Direct Communication with Students</li>
+            </ul>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <h3>Administrative Staff <i class="fas fa-building"></i></h3>
+            <p>Manage administrative tasks with ease:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Resource Allocation</li>
+                <li><i class="fas fa-check-circle"></i> Staff Management</li>
+                <li><i class="fas fa-check-circle"></i> Facility Scheduling</li>
+                <li><i class="fas fa-check-circle"></i> Financial Management</li>
+            </ul>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+
+</body>
+</html>
